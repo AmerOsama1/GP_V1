@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    public float distance = 5f;   // المسافة اللي هيطلعها
-    public float speed = 2f;      // سرعة الحركة
+    public float distance = 5f;   
+    public float speed = 2f;      
 
     private Vector3 startPos;
     private Vector3 targetPos;
