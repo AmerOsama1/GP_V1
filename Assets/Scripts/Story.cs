@@ -14,6 +14,9 @@ public class GameControl : MonoBehaviour
 
     [SerializeField] private Image Current_Ayah;
 
+    [SerializeField] private bool useAudio = true; 
+    [SerializeField] private float imageDelay = 4f;
+
     void Start()
     {
         sc = GetComponent<AudioSource>();
@@ -21,9 +24,9 @@ public class GameControl : MonoBehaviour
         Ayat = Resources.LoadAll<Sprite>("Sour/");
         clips = Resources.LoadAll<AudioClip>("Audio/");
 
-        if (Ayat.Length == 0 || clips.Length == 0)
+        if (Ayat.Length == 0)
         {
-            Debug.LogError("No images or audio found!");
+            Debug.LogError("No images found!");
             return;
         }
 
@@ -32,16 +35,23 @@ public class GameControl : MonoBehaviour
 
     IEnumerator AutoPlay()
     {
-        int max = Mathf.Min(Ayat.Length, clips.Length);
+        int max = useAudio ? Mathf.Min(Ayat.Length, clips.Length) : Ayat.Length;
 
         while (currentIndex < max)
         {
             Current_Ayah.sprite = Ayat[currentIndex];
 
-            sc.clip = clips[currentIndex];
-            sc.Play();
+            if (useAudio && clips.Length > currentIndex)
+            {
+                sc.clip = clips[currentIndex];
+                sc.Play();
 
-            yield return new WaitWhile(() => sc.isPlaying);
+                yield return new WaitWhile(() => sc.isPlaying);
+            }
+            else
+            {
+                yield return new WaitForSeconds(imageDelay);
+            }
 
             currentIndex++;
         }

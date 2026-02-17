@@ -64,8 +64,7 @@ percentageText.text = "Correct Password " + percentage.ToString("0") + "%";
     {
         if(other.CompareTag("Player"))
         {
-                        eventSystem.SetSelectedGameObject(firstSelected);
-
+                eventSystem.SetSelectedGameObject(firstSelected);
             CheckCanvas.SetActive(true);
             PM.enabled = false;
         }
