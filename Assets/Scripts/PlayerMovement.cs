@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] KeyCode _Push;
     [SerializeField] KeyCode _Grab;
 
+bool isgrabed;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -118,14 +119,17 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + moveDir * moveSpeed * Time.fixedDeltaTime);
 
         if (Input.GetKey(KeyCode.LeftShift)||Input.GetButton("Debug Next"))
-        {
+        { 
             isRunning=true;
-            moveSpeed=5;
+             if(!isgrabed){
+           
+            moveSpeed=5;}
         }
         else
         {
             isRunning=false;
-            moveSpeed=3;
+            if(!isgrabed){
+            moveSpeed=3;}
         }
 
         if (isMoving)
@@ -257,13 +261,13 @@ float targetHeight = isCrouching ? Defualthight / 2 : Defualthight;
     private void StopMoving()
     {
      
-
+isgrabed=true;
     moveSpeed = 0;
     rotateSpeed = 0;
     }
     private void resetMoving()
     { 
-
+isgrabed=false;
     moveSpeed = 3;
     rotateSpeed = 6;
 
