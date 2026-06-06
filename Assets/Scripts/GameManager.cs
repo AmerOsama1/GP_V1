@@ -9,11 +9,10 @@ public class GameManager : MonoBehaviour
 
 
     bool ISShow;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
          pm.enabled=false;
-                                                                     UnScale();
+          UnScale();
         Fade.SetActive(true);
         MainMenuUI.SetActive(false);
     }
