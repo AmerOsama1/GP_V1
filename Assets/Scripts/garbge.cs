@@ -8,20 +8,19 @@ public class garbge : MonoBehaviour
 
     void Start()
     {
-        Garbges = new List<GameObject>(); 
     }
 
-    void OnTriggerEnter(Collider other)
+ void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Object"))
     {
-        if (other.CompareTag("Object"))
+        Garbges.Remove(other.gameObject);
+        Destroy(other.gameObject);
+
+        if (Garbges.Count == 0)
         {
-            Destroy(other.gameObject); 
-            Garbges.Remove(gameObject); 
-
-            if (Garbges.Count == 0)
-            {
-                Laser.SetActive(false);
-            }
-
+            Laser.SetActive(false);
+        }
     }
-}}
+}
+}
