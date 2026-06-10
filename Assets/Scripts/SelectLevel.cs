@@ -12,16 +12,13 @@ public class SelectLevel  : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            int savedLevel = PlayerPrefs.GetInt(nameOfLevel, 0);
+      PlayerPrefs.SetInt(nameOfLevel, levelToSave);
+             PlayerPrefs.Save();
 
-            if (levelToSave == savedLevel)
-            {
-                int nextLevel = levelToSave >= lvls.Length - 1 ? lvls.Length - 1 : levelToSave + 1;
-                PlayerPrefs.SetInt(nameOfLevel, nextLevel);
-                PlayerPrefs.Save();
+            SceneManager.LoadScene(sceneToLoad);
+        
 
-                SceneManager.LoadScene(sceneToLoad);
-            }
+           
         }
     }
 }

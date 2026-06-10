@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: ab675e6698bde46fd87143fb0d7580cb, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 32ea4fce7231ca349a48b944302d257e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1101,16 +1101,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a051beb0d870e94cbbb945537a67d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Level: 2
-  LevelToSave: 1
-  Player: {fileID: 1951441744}
+  sceneToLoad: 2
+  levelToSave: 0
+  nameOfLevel: password
   lvls:
   - {fileID: 1438960106}
   - {fileID: 150940262}
   - {fileID: 1039982460}
   - {fileID: 140293786}
-  check: 1
-  nameOfLevel: password
 --- !u!33 &242019250
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1947,16 +1945,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a051beb0d870e94cbbb945537a67d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Level: 2
-  LevelToSave: 3
-  Player: {fileID: 1951441744}
+  sceneToLoad: 2
+  levelToSave: 0
+  nameOfLevel: password
   lvls:
   - {fileID: 1438960106}
   - {fileID: 150940262}
   - {fileID: 1039982460}
   - {fileID: 140293786}
-  check: 1
-  nameOfLevel: password
 --- !u!33 &508248862
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2600,16 +2596,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a051beb0d870e94cbbb945537a67d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Level: 2
-  LevelToSave: 0
-  Player: {fileID: 1951441744}
+  sceneToLoad: 2
+  levelToSave: 0
+  nameOfLevel: password
   lvls:
   - {fileID: 1438960106}
   - {fileID: 150940262}
   - {fileID: 1039982460}
   - {fileID: 140293786}
-  check: 1
-  nameOfLevel: password
 --- !u!33 &789093543
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4642,16 +4636,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a051beb0d870e94cbbb945537a67d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Level: 2
-  LevelToSave: 2
-  Player: {fileID: 1951441744}
+  sceneToLoad: 2
+  levelToSave: 0
+  nameOfLevel: password
   lvls:
   - {fileID: 1438960106}
   - {fileID: 150940262}
   - {fileID: 1039982460}
   - {fileID: 140293786}
-  check: 1
-  nameOfLevel: password
 --- !u!33 &1579124610
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5313,7 +5305,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 0.5943396, g: 0.5685475, b: 0.52985936, a: 1}
-  m_Intensity: 2
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
