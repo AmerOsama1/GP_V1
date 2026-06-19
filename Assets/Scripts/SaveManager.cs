@@ -18,7 +18,7 @@ public class SaveManager : MonoBehaviour
 
     public  void LoadLevel()
     {
-         SceneManager.LoadScene("1");
+         SceneManager.LoadScene("4");
         // if (PlayerPrefs.HasKey("Level"))
         // {
         //     SceneManager.LoadScene(PlayerPrefs.GetString("Level"));

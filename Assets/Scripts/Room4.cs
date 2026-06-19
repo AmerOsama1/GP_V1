@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class checkBox : MonoBehaviour
+public class Room4 : MonoBehaviour
 {
    public CheckCRoom cr;
 bool ishecked;
@@ -9,10 +9,7 @@ bool ishecked;
   {
         if (other.CompareTag("Object")||other.gameObject.name ==(boxColor))
         {
-                        other.transform.position = transform.position; // يتسنّب على بوزيشن السلوت
-
-                        other.transform.rotation = transform.rotation; // يتسنّب على دوران السلوت
-
+            other.transform.rotation=this.transform.rotation;
             if(!ishecked){
             for (int i = 0; i < cr.isdone.Length; i++)
             {
