@@ -123,13 +123,13 @@ bool isgrabed;
             isRunning=true;
              if(!isgrabed){
            
-            moveSpeed=5;}
+            moveSpeed=6;}
         }
         else
         {
             isRunning=false;
             if(!isgrabed){
-            moveSpeed=3;}
+            moveSpeed=4;}
         }
 
         if (isMoving)
@@ -268,7 +268,7 @@ isgrabed=true;
     private void resetMoving()
     { 
 isgrabed=false;
-    moveSpeed = 3;
+    moveSpeed = 4;
     rotateSpeed = 6;
 
     }

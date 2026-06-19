@@ -16,20 +16,24 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public static void LoadLevel()
+    public  void LoadLevel()
     {
-        if (PlayerPrefs.HasKey("Level"))
-        {
-            SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
-        }
-        else
-        {
-            Debug.LogWarning("No saved level found!");
-        }
+         SceneManager.LoadScene("1");
+        // if (PlayerPrefs.HasKey("Level"))
+        // {
+        //     SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("No saved level found!");
+        // }
     }
     public void NewGame()
     {
-                    SceneManager.LoadScene("4");
+             PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+                    SceneManager.LoadScene("1");
+                    
 
     }
 }

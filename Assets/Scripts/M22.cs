@@ -1,9 +1,13 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class M22 : MonoBehaviour
 {
    
+       public EventSystem es;
+    public GameObject firstSelected;
+
         public bool[] check;
         int index = 0;
       public GameObject WIN,green;
@@ -25,6 +29,8 @@ public class M22 : MonoBehaviour
         {
            WIN.SetActive(true);
            green.SetActive(true);
+               es.SetSelectedGameObject(null);
+            es.SetSelectedGameObject(firstSelected);
         }
        
     }

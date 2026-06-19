@@ -8,7 +8,7 @@ public class ChangeCamera : MonoBehaviour
     public EventSystem es;
     public GameObject TestCam;
     public GameObject MIssion;
-
+  AudioSource sc;
     public GameObject firstSelected;
 
     void OnTriggerEnter(Collider other)
@@ -18,6 +18,8 @@ public class ChangeCamera : MonoBehaviour
             TestCam.SetActive(true);
             PlayerCam.SetActive(false);
             movement.enabled = false;
+            sc=other.GetComponent<AudioSource>();
+            sc.mute=true;
            es.SetSelectedGameObject(null);
             es.SetSelectedGameObject(firstSelected);
           Invoke("delay",2);

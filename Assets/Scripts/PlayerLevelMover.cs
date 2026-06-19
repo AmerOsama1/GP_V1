@@ -4,16 +4,27 @@ public class PlayerLevelMover : MonoBehaviour
 {
     public Transform[] lvls;
     public string nameOfLevel;
-    float moveSpeed = 2f;
+   public float moveSpeed = 2f;
 
     Vector3 targetPosition;
     Animator animator;
+
 
    void Start()
 {   
     animator = GetComponent<Animator>();
     
-    int savedLevel = PlayerPrefs.GetInt(nameOfLevel, 0);
+   int savedLevel = PlayerPrefs.GetInt(nameOfLevel, -1);
+
+if (savedLevel == -1)
+{
+    savedLevel = 0;
+    PlayerPrefs.SetInt(nameOfLevel, savedLevel);
+    PlayerPrefs.Save();
+}
+
+Debug.Log(savedLevel);
+
 
     if (savedLevel >= lvls.Length)
     {
@@ -24,7 +35,12 @@ public class PlayerLevelMover : MonoBehaviour
 
     targetPosition = lvls[savedLevel].position;
 }
-    void Update()
+
+
+
+
+     void Update()
+
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         

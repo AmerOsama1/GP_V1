@@ -13,15 +13,15 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: GP_V1
+  productName: Mission Secure
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 0
   m_SplashScreenAnimation: 1
-  m_SplashScreenLogoStyle: 0
+  m_SplashScreenLogoStyle: 1
   m_SplashScreenDrawMode: 0
   m_SplashScreenBackgroundAnimationZoom: 0
   m_SplashScreenLogoAnimationZoom: 1
@@ -40,11 +40,11 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: d04d15b707eb6fa4998f6593a44128e6, type: 3}
+  - logo: {fileID: 21300000, guid: 619212f063d17ca4dbe8209c72e909a3, type: 3}
     duration: 5
-  - logo: {fileID: 21300000, guid: 59e4b04907ee09448be1650848732abe, type: 3}
+  - logo: {fileID: 21300000, guid: 1c6bfbd9d8d86d5499bd464eb8d9a35b, type: 3}
     duration: 10
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: af37ba63e044d59489abd52277af4848, type: 3}
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 619df5a415743ec489ae96df52d1ace1, type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -306,7 +306,7 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4553f4f54a875254a9770c75ebc9c2fb, type: 3}
+      m_Icon: {fileID: 2800000, guid: 619df5a415743ec489ae96df52d1ace1, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
@@ -348,7 +348,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4553f4f54a875254a9770c75ebc9c2fb, type: 3}
+      m_Icon: {fileID: 2800000, guid: 619df5a415743ec489ae96df52d1ace1, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

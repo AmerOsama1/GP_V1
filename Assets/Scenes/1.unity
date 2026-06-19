@@ -461,7 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameControl
   Current_Ayah: {fileID: 798448582}
   useAudio: 0
-  imageDelay: 3
+  imageDelay: 1.5
 --- !u!1 &731891172
 GameObject:
   m_ObjectHideFlags: 0

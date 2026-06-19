@@ -6,7 +6,8 @@ public class LevelLoader : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject player;
     public string nameOfLevel;
-
+    public string Lvl;
+    public SceneTimer  st;
     void Awake()
     {
         int savedLevel = PlayerPrefs.GetInt(nameOfLevel, -1);
@@ -30,11 +31,24 @@ public class LevelLoader : MonoBehaviour
             rb.MovePosition(spawnPoints[savedLevel].position);
             rb.MoveRotation(spawnPoints[savedLevel].rotation);
         }
-     
+
+
+    //   if(nameOfLevel =="ENCRYPTION"){
+    //     if(savedLevel>=2){
+    //      st.totalTime=90;}
+    //   }
     }
 
     public void GOTOMAiN()
     {
-        SceneManager.LoadScene("4");
+        SceneManager.LoadScene(Lvl);
+         int savedLevel = PlayerPrefs.GetInt(nameOfLevel, -1);
+         savedLevel +=1; 
+       PlayerPrefs.SetInt(nameOfLevel,savedLevel);
+        PlayerPrefs.Save();
     }
+  
+  public void goToMainWithoutSave(){
+    SceneManager.LoadScene(Lvl);
+  }
 }

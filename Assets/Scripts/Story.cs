@@ -14,17 +14,30 @@ public class GameControl : MonoBehaviour
 
     [SerializeField] private Image Current_Ayah;
 
-    [SerializeField] private bool useAudio = true; 
+    [SerializeField] private bool useAudio = true;
     [SerializeField] private float imageDelay = 4f;
 
-    void Start()
+    void OnEnable()
     {
+        ResetAndPlay();
+    }
+
+    private void ResetAndPlay()
+    {
+        StopAllCoroutines();
+
         sc = GetComponent<AudioSource>();
+        if (sc != null)
+        {
+            sc.Stop();
+        }
 
         Ayat = Resources.LoadAll<Sprite>("Sour/");
         clips = Resources.LoadAll<AudioClip>("Audio/");
 
-        if (Ayat.Length == 0)
+        currentIndex = 0;
+
+        if (Ayat == null || Ayat.Length == 0)
         {
             Debug.LogError("No images found!");
             return;
@@ -56,6 +69,6 @@ public class GameControl : MonoBehaviour
             currentIndex++;
         }
 
-        SceneManager.LoadScene("2");
+        SceneManager.LoadScene("4");
     }
 }

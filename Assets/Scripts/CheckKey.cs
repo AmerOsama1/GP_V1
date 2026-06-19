@@ -1,14 +1,20 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class CheckKey : MonoBehaviour
 {
+        public EventSystem es;
+
      public TMP_InputField inputField;
     public GameObject correctObj;
       public GameObject correctObj1;
       public GameObject current;
     public GameObject wrongObj;
     public int maxLength = 10;
+
+        public GameObject firstSelected;
+
      public void WriteLetter(string letter)
     {
         if (inputField.text.Length >= maxLength) return;
@@ -25,6 +31,8 @@ public class CheckKey : MonoBehaviour
     {
         if (inputField.text == "AES-256-CYBER")
         {
+               es.SetSelectedGameObject(null);
+            es.SetSelectedGameObject(firstSelected);
             correctObj.SetActive(true);
             current.SetActive(false);
             correctObj1.SetActive(true);
