@@ -6483,6 +6483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevelMover
   lvls:
+  - {fileID: 1500725051}
   - {fileID: 140293786}
   - {fileID: 1039982460}
   - {fileID: 150940262}

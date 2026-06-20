@@ -19281,7 +19281,7 @@ Transform:
   m_GameObject: {fileID: 495639548}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.91042, y: -16.57, z: -13.749391}
+  m_LocalPosition: {x: 24.91042, y: -23, z: -13.749391}
   m_LocalScale: {x: 137.1914, y: 0.5652958, z: 322.1442}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24143,6 +24143,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613467981}
   m_Mesh: {fileID: -5147748569767251876, guid: 66f91e45b3db4984494c4394f379f7a7, type: 3}
+--- !u!4 &616315274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3520224506522053770, guid: f54aea8876ce49049a0822f4ffc9f37a, type: 3}
+  m_PrefabInstance: {fileID: 4948422338273715828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &623728243
 GameObject:
   m_ObjectHideFlags: 0
@@ -60936,7 +60941,7 @@ Transform:
   m_GameObject: {fileID: 1728095331}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06282416, y: 0.7043104, z: -0.06282416, w: 0.7043104}
-  m_LocalPosition: {x: -14.53, y: 4.44, z: -59.3}
+  m_LocalPosition: {x: -4.2299995, y: 4.44, z: -50.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -93545,7 +93550,7 @@ Transform:
   m_GameObject: {fileID: 8084878807903744127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.64354247, z: -0, w: 0.7654105}
-  m_LocalPosition: {x: -6.3, y: 0.44, z: -59.3}
+  m_LocalPosition: {x: 4, y: 0.44, z: -50.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -122933,6 +122938,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 242793065831565618, guid: f54aea8876ce49049a0822f4ffc9f37a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 308657897854198238, guid: f54aea8876ce49049a0822f4ffc9f37a, type: 3}
       propertyPath: nameOfLevel
       value: password
@@ -122985,6 +122994,14 @@ PrefabInstance:
       propertyPath: nameOfLevel
       value: password
       objectReference: {fileID: 0}
+    - target: {fileID: 6316487142986160687, guid: f54aea8876ce49049a0822f4ffc9f37a, type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316487142986160687, guid: f54aea8876ce49049a0822f4ffc9f37a, type: 3}
+      propertyPath: 'spawnPoints.Array.data[4]'
+      value: 
+      objectReference: {fileID: 616315274}
     - target: {fileID: 7241899989364319528, guid: f54aea8876ce49049a0822f4ffc9f37a, type: 3}
       propertyPath: m_Name
       value: Load Level
